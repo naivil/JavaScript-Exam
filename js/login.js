@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     show("Login successful!", "success");
 
     setTimeout(function () {
-      window.location.href = "dashboard.html";
+      window.location.href = "index.html";
     }, 1000);
   });
 
