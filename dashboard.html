@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExpenseHub – Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="dash-bg">
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="sidebar-brand">ExpenseHub</div>
+
+    <ul class="sidebar-menu">
+        <li class="active">Dashboard</li>
+        <li>Expenses</li>
+        <li>Analytics</li>
+    </ul>
+
+    <button id="logout-btn" class="btn logout-btn">Logout</button>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <h2 class="head-title">Dashboard Overview</h2>
+
+    <!-- Cards -->
+    <div class="row g-4 mt-3">
+        <div class="col-md-4">
+            <div class="stats-card">
+                <h5>Total Expenses</h5>
+                <h2 id="total-amount">₹0</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="stats-card">
+                <h5>Total Categories</h5>
+                <h2>5</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="stats-card">
+                <h5>Your Profile</h5>
+                <h2 id="username-display"></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Expense -->
+    <div class="add-card mt-4">
+        <h4>Add Expense</h4>
+
+        <form id="expense-form" class="row g-3 mt-2">
+            <div class="col-md-3">
+                <input id="expense-name" class="form-control add-input" placeholder="Expense Name">
+            </div>
+
+            <div class="col-md-2">
+                <input id="expense-amount" type="number" class="form-control add-input" placeholder="Amount">
+            </div>
+
+            <div class="col-md-3">
+                <input id="expense-date" type="date" class="form-control add-input">
+            </div>
+
+            <div class="col-md-2">
+                <select id="expense-category" class="form-control add-input">
+                    <option value="">Category</option>
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Shopping</option>
+                    <option>Bills</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-add w-100">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Table -->
+    <div class="table-card mt-4">
+        <h4>Your Expenses</h4>
+        <table class="table table-hover mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount (₹)</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="./js/dashboard.js"></script>
+</body>
+</html>
